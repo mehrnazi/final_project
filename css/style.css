@@ -1,0 +1,63 @@
+@import url("normalize.css");
+body{
+	padding:10px;
+}
+
+section{
+	/*
+	column-count is used to determine 
+	how many columns to display
+	*/
+	-webkit-column-count: 3;
+	column-count: 3;
+	
+	/* column-rule is used to  
+		add/style lines between wach column
+	-webkit-column-rule-width: 1px;
+	-webkit-column-rule-style: solid;
+	-webkit-column-rule-color: black;
+	column-rule-width: 1px;
+	column-rule-style: solid;
+	column-rule-color: black;
+	*/
+	-webkit-column-rule:1px dotted black;
+	column-rule:1px dotted black;
+	
+	/*
+	column-gap: determines spaces in between each column
+	*/
+	-webkit-column-gap:10px;
+	column-gap:10px;
+	
+	padding:20px;
+	border:solid 1px black;
+}
+section p{
+	margin-top:10px;
+}
+section img{
+	float:left;
+	margin:10px;
+	border:solid black 1px;
+	width:50px;
+}
+
+h2{
+	/*
+	column-span: allow some content stretch across all columns....
+	*/	
+	column-span:all;
+	margin:0px;	
+}
+@media screen and (max-width:650px){
+	section{
+		-webkit-column-count: 2;
+		column-count: 2;
+	}	
+}
+@media screen and (max-width:500px){
+	section{
+		-webkit-column-count: 1;
+		column-count: 1;
+	}	
+}
